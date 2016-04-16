@@ -1,0 +1,113 @@
+/*---------------- 
+这里是网页头部的less文件引入
+ ---------------*/
+
+.page-header {
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    background: #eee;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.h-banner {
+    position: absolute;
+    left: 0px;
+    a {
+        margin-left: 5px;
+        font: italic 30px "microsoft jhenghei";
+    }
+}
+
+.h-logo {
+    vertical-align: bottom;
+    width: 60px;
+    height: 60px;
+}
+
+.social-icon {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 15px;
+    .flm {}
+    .s-icon {
+        display: inline-block;
+        width: 20px;
+    }
+}
+
+.page-nav {
+    display: block;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.nav-ls {
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    .nav-item {
+        font-size: 18px;
+        display: inline-block;
+        width: 20%;
+        text-align: center;
+        a {
+            display: inline-block;
+            height: 55px;
+            padding: 0 6px;
+            color: #333;
+            -webkit-transition: all .1s;
+            -o-transition: all .1s;
+            transition: all .1s;
+            &:hover {
+                font-weight: bold;
+                color: #000;
+                font-size: 20px;
+                border-bottom: 5px solid @theme-color;
+            }
+        }
+        .active {
+            font-weight: bold;
+            color: #000;
+            font-size: 20px;
+            border-bottom: 5px solid @theme-color;
+        }
+    }
+}
+
+.post-search {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    right: 250px;
+    .s-lab {
+        position: relative;
+        right: -27px;
+    }
+    .search-inpt {
+        width: 2px;
+        height: 25px;
+        border: 1px solid #ccc;
+        outline: none;
+        padding-left: 25px;
+        border-radius: 25px;
+        font-family: "microsoft yahei";
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        &:focus {
+            width: 150px;
+            border: 1px solid @theme-color;
+        }
+    }
+}
+/*---------------------
+     header CSS完成 
+ --------------------*/

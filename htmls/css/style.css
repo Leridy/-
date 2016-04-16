@@ -1,0 +1,172 @@
+/*---------------------------- 
+DATE:2016/4/16
+AUTHOR:LERIDY_LEI
+ver.:1.0.0
+DESCRIPTION:This is an less/css
+file for our design .
+ ---------------------------*/
+/*-------------------- 
+   社交网络图标部份
+ -------------------*/
+.fa {
+  color: #a0a0a0;
+  -webkit-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+.fa-weibo:hover {
+  color: #f00;
+}
+.fa-google-plus:hover {
+  color: #f00;
+}
+.fa-twitter:hover {
+  color: #1AB2E8;
+}
+.fa-github:hover {
+  color: #000;
+}
+.fa-facebook-official:hover {
+  color: #3B5B98;
+}
+/*---------------------
+     社交CSS完成 
+ --------------------*/
+/*---------------- 
+这里是网页头部的less文件引入
+ ---------------*/
+.page-header {
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  background: #eee;
+  border-bottom: 1px solid #c8c8c8;
+}
+.h-banner {
+  position: absolute;
+  left: 0px;
+}
+.h-banner a {
+  margin-left: 5px;
+  font: italic 30px "microsoft jhenghei";
+}
+.h-logo {
+  vertical-align: bottom;
+  width: 60px;
+  height: 60px;
+}
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 15px;
+}
+.social-icon .s-icon {
+  display: inline-block;
+  width: 20px;
+}
+.page-nav {
+  display: block;
+  width: 35%;
+  margin: 0 auto;
+}
+.nav-ls {
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+.nav-ls .nav-item {
+  font-size: 18px;
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.nav-ls .nav-item a {
+  display: inline-block;
+  height: 55px;
+  padding: 0 6px;
+  color: #333;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+.nav-ls .nav-item a:hover {
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+  border-bottom: 5px solid #ff9966;
+}
+.nav-ls .nav-item .active {
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+  border-bottom: 5px solid #ff9966;
+}
+.post-search {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  right: 250px;
+}
+.post-search .s-lab {
+  position: relative;
+  right: -27px;
+}
+.post-search .search-inpt {
+  width: 2px;
+  height: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding-left: 25px;
+  border-radius: 25px;
+  font-family: "microsoft yahei";
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.post-search .search-inpt:focus {
+  width: 150px;
+  border: 1px solid #ff9966;
+}
+/*---------------------
+     header CSS完成 
+ --------------------*/
+/*---------------- 
+这里是container的less文件引入
+ ---------------*/
+#container {
+  clear: both;
+  margin: 0 auto 40px;
+  padding: 20px 20px 0;
+  width: 960px;
+}
+/*----------------
+引入完成
+--------------- */
+#main {
+  float: left;
+  width: 700px;
+}
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 18px microsoft yahei, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+::selection {
+  background: #ff9966;
+  color: #fff;
+}
