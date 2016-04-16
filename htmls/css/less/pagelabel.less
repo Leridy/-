@@ -1,0 +1,116 @@
+/* 
+-------------------------
+分页部份css
+-------------------------
+ */
+
+.page-label {
+    clear: both;
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+    // 设置分页位置信息，定位。
+}
+
+.page-lab-bx {
+    span {
+        float: left;
+        display: inline-block;
+        width: 6%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        //设置分页选项中非 a 标签样式
+    }
+    .current {
+        background-color: @theme-color;
+        color: #fff;
+        // 设置分页选项中非 a 标签被选中 (当前页面选项)样式
+    }
+    a {
+        float: left;
+        display: inline-block;
+        text-align: center;
+        width: 6%;
+        height: 40px;
+        line-height: 40px;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+        &:hover {
+            background-color: @theme-color;
+            color: #fff;
+        }
+        //设置分页选项中非 a 标签样式
+    }
+}
+
+// 简单分页样式完成
+.page-label-select {
+    float: right;
+    text-align: center;
+    width: 120px;
+    // 设置select栏的位置和大小
+    .pagination {
+        display: block;
+        width: 120px;
+        position: relative;
+        line-height: 40px;
+        font-size: 16px;
+        border: 1px solid @theme-color;
+        background-color: #fff;
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        // h3标签的样式
+        &:hover {
+            color: #fff;
+            background-color: @theme-color;
+            // h3鼠标经过时的样式
+            >.select-list {
+                height: 200px;
+                position: absolute;
+                top: -90px;
+                opacity: 1;
+                width: 120px;
+                // h3鼠标经过时下一级中.select_list的样式
+            }
+        }
+        .select-list {
+            border: 1px solid @theme-color;
+            z-index: 100;
+            top: 0px;
+            height: 0px;
+            width: 0px;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            position: absolute;
+            overflow-x: hidden;
+            overflow-y: auto;
+            list-style: none;
+            background-color: #f0f0f0;
+            // .select_list的初始样式
+            -webkit-transition: all .4s ease .1s;
+            -o-transition: all .4s ease .1s;
+            transition: all .4s ease .1s;
+            .child-item {
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                &:hover {
+                    background-color: @theme-color;
+                    &>a {
+                        color: #fff;
+                        // child_item鼠标经过时下一级中.a的样式
+                    }
+                }
+                a {
+                    display: block;
+                    padding: 0 11px;
+                    // a的样式
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,10 @@ file for our design .
 @import url(page-header.less);
 @import url(container.less);
 @import url(main.less);
+@import url(artcle.less);
+@import url(sidebar.less);
+@import url(pagelabel.less);
+@import url(footer.less);
 @theme-color: #f96;
 //normalize some css for tags
 html,
@@ -20,11 +24,17 @@ body {
     margin: 0;
     padding: 0;
     font: 18px microsoft yahei, sans-serif;
+    background-color: #eee;
 }
 
 a {
     text-decoration: none;
     color: #000;
+}
+
+h1,h2,h3{
+	margin: 0;
+	padding: 0;
 }
 
 ::selection {

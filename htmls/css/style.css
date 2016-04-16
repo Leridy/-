@@ -36,10 +36,12 @@ file for our design .
 这里是网页头部的less文件引入
  ---------------*/
 .page-header {
-  position: relative;
+  position: fixed;
+  z-index: 9999;
   height: 60px;
+  width: 100%;
   line-height: 60px;
-  background: #eee;
+  background: #fff;
   border-bottom: 1px solid #c8c8c8;
 }
 .h-banner {
@@ -143,15 +145,335 @@ file for our design .
 #container {
   clear: both;
   margin: 0 auto 40px;
-  padding: 20px 20px 0;
+  padding: 80px 20px 0;
   width: 960px;
 }
 /*----------------
 引入完成
 --------------- */
+/*------------------
+这是main标签的属性引入 
+ -------------------*/
 #main {
   float: left;
   width: 700px;
+}
+/* ----------------
+引入完成
+ -----------------*/
+/* 
+-------------------------------
+文章页的css属性。
+-------------------------------
+ */
+.atc-entry {
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  height: 250px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  clear: both;
+  color: #999;
+  border-top: 3px solid #ff9966;
+}
+.atc-entry::before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-top: 60px solid #EEEEEE;
+  border-right: 60px solid transparent;
+}
+.atc-entry::after {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-bottom: 60px solid #EEEEEE;
+  border-left: 60px solid transparent;
+}
+.atc-t {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  -webkit-transition: text-shadow 1s;
+  -o-transition: text-shadow 1s;
+  transition: text-shadow 1s;
+  font-weight: lighter;
+}
+.atc-t:hover {
+  text-shadow: 0 0 5px #ff9966;
+}
+.atc-r {
+  position: absolute;
+  top: 85px;
+  left: 50px;
+  width: 85%;
+  font-size: 15px;
+  text-indent: 30px;
+}
+.atc-ra {
+  position: absolute;
+  bottom: 20px;
+  right: 65px;
+  font-size: 15px;
+}
+/* 
+-----------------------------------
+文章页属性引入完毕
+-----------------------------------
+ */
+/* 
+-----------------------------
+边栏的样式表
+-----------------------------
+ */
+#sidebar {
+  position: relative;
+  float: right;
+  overflow: hidden;
+  width: 240px;
+}
+.widget {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-top: 3px solid #ff9966;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.widget-h {
+  width: 100px;
+  margin-bottom: 5px;
+  background-color: #ff9966;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+}
+.ms-info-bx {
+  position: relative;
+  width: 100%;
+}
+.ms-info-logo {
+  position: absolute;
+  left: 60%;
+  top: 10px;
+  margin-left: -25%;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+}
+.ms-info {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  top: 80px;
+  height: 35px;
+  font-size: 15px;
+}
+.w-tag-grp {
+  width: 90%;
+  margin: 0 auto;
+}
+.w-tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 5px 7px;
+  color: #eee;
+  border-radius: 5px;
+}
+.w-tag:nth-child(6n+1) {
+  background-color: #428BCA;
+}
+.w-tag:nth-child(6n+2) {
+  background-color: #5cb85c;
+}
+.w-tag:nth-child(6n+3) {
+  background-color: #ff9966;
+}
+.w-tag:nth-child(6n+4) {
+  background-color: #d9534f;
+}
+.w-tag:nth-child(6n+5) {
+  background-color: #567e95;
+}
+.w-tag:nth-child(6n+6) {
+  background-color: #b433ff;
+}
+.w-rpost {
+  margin: 0;
+  list-style-type: square;
+}
+.w-rpost-item {
+  position: relative;
+  height: 40px;
+  width: 90%;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.w-rpost-item a {
+  color: #1f1f1f;
+}
+.w-rpost-item:hover {
+  left: 5px;
+}
+.w-rpost-item:hover a {
+  color: #000;
+  font-weight: bold;
+}
+.w-zhbewm {
+  width: 240px;
+  height: 240px;
+}
+.w-note {
+  font-size: 12px;
+  margin-left: 10px;
+}
+/* 
+------------------------------
+边栏引入完毕
+------------------------------
+ */
+/* 
+-------------------------
+分页部份css
+-------------------------
+ */
+.page-label {
+  clear: both;
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.page-lab-bx span {
+  float: left;
+  display: inline-block;
+  width: 6%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.page-lab-bx .current {
+  background-color: #ff9966;
+  color: #fff;
+}
+.page-lab-bx a {
+  float: left;
+  display: inline-block;
+  text-align: center;
+  width: 6%;
+  height: 40px;
+  line-height: 40px;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.page-lab-bx a:hover {
+  background-color: #ff9966;
+  color: #fff;
+}
+.page-label-select {
+  float: right;
+  text-align: center;
+  width: 120px;
+}
+.page-label-select .pagination {
+  display: block;
+  width: 120px;
+  position: relative;
+  line-height: 40px;
+  font-size: 16px;
+  border: 1px solid #ff9966;
+  background-color: #fff;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.page-label-select .pagination:hover {
+  color: #fff;
+  background-color: #ff9966;
+}
+.page-label-select .pagination:hover > .select-list {
+  height: 200px;
+  position: absolute;
+  top: -90px;
+  opacity: 1;
+  width: 120px;
+}
+.page-label-select .pagination .select-list {
+  border: 1px solid #ff9966;
+  z-index: 100;
+  top: 0px;
+  height: 0px;
+  width: 0px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+  background-color: #f0f0f0;
+  -webkit-transition: all .4s ease .1s;
+  -o-transition: all .4s ease .1s;
+  transition: all .4s ease .1s;
+}
+.page-label-select .pagination .select-list .child-item {
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.page-label-select .pagination .select-list .child-item:hover {
+  background-color: #ff9966;
+}
+.page-label-select .pagination .select-list .child-item:hover > a {
+  color: #fff;
+}
+.page-label-select .pagination .select-list .child-item a {
+  display: block;
+  padding: 0 11px;
+}
+/* 
+------------------------------
+底部版权信息等
+------------------------------
+ */
+#footer {
+  position: relative;
+  clear: both;
+  top: 50px;
+  margin: 0 auto;
+  padding: 2em 0;
+  width: 960px;
+  border-top: 3px solid #ddd;
+  font-size: 12px;
+  color: #aaa;
+}
+#footer a {
+  color: #aaa;
+  border-bottom: 1px dashed #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+#footer a:hover {
+  color: #000000;
+}
+.ft-links {
+  text-align: center;
+}
+.copyright {
+  padding-top: 10px;
+  text-align: center;
 }
 html,
 body {
@@ -161,10 +483,17 @@ body {
   margin: 0;
   padding: 0;
   font: 18px microsoft yahei, sans-serif;
+  background-color: #eee;
 }
 a {
   text-decoration: none;
   color: #000;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
 }
 ::selection {
   background: #ff9966;

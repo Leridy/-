@@ -1,0 +1,72 @@
+/* 
+-------------------------------
+文章页的css属性。
+-------------------------------
+ */
+
+.atc-entry {
+    position: relative;
+    margin-bottom: 20px;
+    background: #fff;
+    height: 250px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+    clear: both;
+    color: #999;
+    border-top: 3px solid @theme-color;
+    &::before {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-top: 60px solid #EEEEEE;
+        border-right: 60px solid transparent;
+    }
+    &::after {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-bottom: 60px solid #EEEEEE;
+        border-left: 60px solid transparent;
+    }
+}
+
+.atc-t {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    -webkit-transition: text-shadow 1s;
+    -o-transition: text-shadow 1s;
+    transition: text-shadow 1s;
+    font-weight: lighter;
+    &:hover {
+        text-shadow: 0 0 5px @theme-color;
+    }
+}
+
+.atc-r {
+    position: absolute;
+    top: 85px;
+    left: 50px;
+    width: 85%;
+    font-size: 15px;
+    text-indent: 30px;
+}
+
+.atc-ra {
+    position: absolute;
+    bottom: 20px;
+    right: 65px;
+    font-size: 15px;
+}
+
+
+/* 
+-----------------------------------
+文章页属性引入完毕
+-----------------------------------
+ */

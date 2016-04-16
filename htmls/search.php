@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="keywords" content="完全是为了应付作业">
     <meta name="description" content="完全是为了应付作业" />
-    <title>我的博客 | 完全是为了应付作业</title>
+    <title>什么--搜索结果 | 完全是为了应付作业</title>
     <link rel="stylesheet" type="text/css" href="./addtionalFonts/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
@@ -50,47 +50,27 @@
     <div id="container">
         <main id="main">
             <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
+                <h1 class="atc-t"><a href="#">这是一条什么占位置的说说</a></h1>
                 <section class="atc-r">
                     是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
                 </section>
                 <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
             </article>
             <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
+                <h1 class="atc-t"><a href="#">这是一条什么占位置的说说</a></h1>
                 <section class="atc-r">
                     是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
                 </section>
                 <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
             </article>
             <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
+                <h1 class="atc-t"><a href="#">这是一条什么占位置的说说</a></h1>
                 <section class="atc-r">
                     是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
                 </section>
                 <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
             </article>
-            <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
-                <section class="atc-r">
-                    是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
-                </section>
-                <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
-            </article>
-            <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
-                <section class="atc-r">
-                    是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
-                </section>
-                <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
-            </article>
-            <article id="post-$" class="atc-entry">
-                <h1 class="atc-t"><a href="#">这是一条占位置的说说</a></h1>
-                <section class="atc-r">
-                    是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，是用来占位置的摘要，
-                </section>
-                <a href="#" title="阅读全文" class="atc-ra">查看全文 +</a>
-            </article>
+
             <div class="page-label">
                 <div class="page-lab-bx">
                     <span class=""><i class="fa fa-angle-left"></i></span>
