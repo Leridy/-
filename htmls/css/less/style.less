@@ -6,16 +6,8 @@ DESCRIPTION:This is an less/css
 file for our design .
  ---------------------------*/
 
-@import url(s-icon.less);
-@import url(page-header.less);
-@import url(container.less);
-@import url(main.less);
-@import url(artcle.less);
-@import url(sidebar.less);
-@import url(pagelabel.less);
-@import url(footer.less);
-@theme-color: #f96;
 //normalize some css for tags
+@theme-color: #FD6D6D;
 html,
 body {
     position: relative;
@@ -32,12 +24,85 @@ a {
     color: #000;
 }
 
-h1,h2,h3{
-	margin: 0;
-	padding: 0;
+input,
+textarea,
+*[class$="-inpt"],
+*[class$="-textarea"] {
+    font-family: "microsoft yahei";
+    border-radius: 3px;
+    outline: none;
+    resize: none;
+}
+
+*[class$="-notice"] {
+    position: relative;
+    font-size: 12px;
+    &:before {
+        content: " * "
+    }
+}
+
+a,
+.main-title,
+.flk-link,
+.w-tag,
+.s-icon,
+.post-search,
+.nav-item,
+.lg-label,
+.lg-inpt {
+    display: inline-block;
+}
+
+.flk-notice,
+.ms-info,
+.pagination,
+.page-nav,
+.lg-notice,
+.w-atc-label {
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
 ::selection {
     background: @theme-color;
     color: #fff;
 }
+
+//引入社交图标的样式表
+@import url(s-icon.less);
+//引入头部的样式表
+@import url(page-header.less);
+//引入主容器的样式表
+@import url(container.less);
+//引入博客主要部分样式表
+@import url(main.less);
+//引入文章展示样式表
+@import url(article.less);
+//引入边栏样式表
+@import url(sidebar.less);
+//引入分页样式表
+@import url(pagelabel.less);
+//引入网页底部样式表
+@import url(footer.less);
+//引入友链頁样式表
+@import url(friendlink.less);
+//引入卡片容器样式表
+@import url(cardbox.less);
+//引入登录框样式表
+@import url(login-box.less);
+//引入链接以及按钮样式
+@import url(buttonlink.less);
+//引入404页面样式表
+@import url(404.less);
+//引入发布文章，修改文章样式表
+@import url(write-article.less);
+//引入表格属性
+@import url(table.less);
+

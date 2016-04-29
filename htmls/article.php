@@ -1,25 +1,18 @@
 <?php 
     include'./admin/function.php';
     require_once ('connect.php');
-    $keywords = is_search();
-    $p = get_sqlStart();
-
-    $page = get_page();
-
-    $page = get_page();
-
-    $sql = "select * from article where keywords like '%$keywords%' order by time desc limit ".$p.",4";
+    $id = intval($_GET['id']);
+    $sql = "select * from article where id=$id";
     $query = mysql_query($sql);
-    if($query&& mysql_num_rows($query )){
-        while($row = mysql_fetch_assoc($query)){
-            $data[] = $row;
-        }
-    }
+    if($query&&mysql_num_rows($query)){
+        $row = mysql_fetch_assoc($query);
+    }else{
+        echo "<script>window.location.href='404.php';</script>";
+        exit;
+    } 
 
-    $totalSql = "select * from article where keywords like '%$keywords%'";
-    $totalNum = mysql_num_rows(mysql_query($totalSql));
-    
-    $sHeader = tag_or_search();
+    $ids = format_article_id(get_article_id_title($id));//用于指向上一篇下一篇
+
  ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -30,7 +23,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="keywords" content="完全是为了应付作业">
     <meta name="description" content="完全是为了应付作业" />
-    <title><?php echo $keywords."--".$sHeader; ?> | 完全是为了应付作业</title>
+    <title><?php echo $row['title'] ?> | 完全是为了应付作业</title>
     <link rel="stylesheet" type="text/css" href="<?php echo $location; ?>addtionalFonts/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $location; ?>css/style.css">
 </head>
@@ -48,7 +41,7 @@
         </nav>
         <form method="GET" action="search.php" class="post-search">
             <label for="s" class="fa fa-search s-lab"></label>
-            <input type="text" class="search-inpt" name="keywords" placeholder=" 请输入你的关键词" value="" id="s" autofocus AutoComplete="off">
+            <input type="text" class="search-inpt" name="keywords" placeholder=" 请输入你的关键词" id="s" AutoComplete="off">
         </form>
         <ul class="social-icon hd-r">
             <span class="flm">关注我：</span>
@@ -71,49 +64,24 @@
     </header>
     <div id="container">
         <main id="main">
-            <header id="search-page-header" class="main-header">
-                <h1 class="s-p-h-keywords main-title"><?php echo $sHeader.":".$keywords; ?></h1>
-            </header>
-
-            <?php
-                if(empty($data)){   
-                echo "<article  class=\"atc-entry card-box\">
-                        <header class=\"atc-h\">
-                        <h1 class=\"atc-c-t\">>~< ! 对不起，没有内容</h1>
-                        <span class=\"atc-info\"><i class=\"fa fa-user\"></i> 勤劳的程序猿</span> 
-                        <span class=\"atc-info\"><i class=\"fa fa-calendar\"></i> 盘古开天辟地之时</span>
-                        </header>
-                        <section class=\"atc-r\">
-                        对不起暂时没有相关内容被添加，请联系博主添加相关内容 ;-) .
-                        </section>
-                        <a href=\"mailto://admin@leridy.pw\" title=\"联系博主\" class=\"atc-ra\"><i class=\"fa fa-envelope\"></i> 联系博主 +</a>
-                        </article>";
-                }else{
-                foreach($data as $value){
-            ?>
-
-                <article id="post-<?php echo $value['id']?>" class="atc-entry card-box">
+            <article id="post-$" class="atc-content card-box">
                 <header class="atc-h">
-                    <h1 class="atc-c-t"><a href="article.php?id=<?php echo $value['id']?>"><?php echo $value['title']?></a></h1>
-                    <span class="atc-info"><i class="fa fa-user"></i> <?php echo $value['author']?></span> 
-                    <span class="atc-info"><i class="fa fa-calendar"></i> <?php echo date("Y-m-d",$value['time'])?></span>
+                    <h1 class="atc-c-t"><a href="article.php?id=<?php echo $row['id']?>"><?php echo $row['title']?></a></h1>
+                    <span class="atc-info"><i class="fa fa-user"></i> <?php echo $row['author']?></span> 
+                    <span class="atc-info"><i class="fa fa-calendar"></i> <?php echo date("Y-m-d",$row['time'])?></span>
                 </header>
-                <section class="atc-r">
-                    <?php echo $value['summary']?>
-                </section>
-                <a href="article.php?id=<?php echo $value['id']?>" title="阅读全文" class="atc-ra">查看全文 +</a>
+                <p class="atc-p">
+                    <?php echo $row['content']?>
+                </p>
+                    <?php echo $ids ?>
             </article>
-            <?php
-                }
-            }
-            ?>
-            <?php pagination($page,$totalNum,$keywords) ?>
+            <p class="atc-notice"> >_< 对不起，暂未开放评论功能</p>
         </main>
         <div id="sidebar">
             <aside class="widget widget-webmaster-info">
                 <header class="widget-h">博主信息</header>
                 <div class="ms-info-bx">
-                    <img src="./images/logo.jpeg" alt="博主头像" class="ms-info-logo">
+                    <img src="<?php echo $location; ?>images/logo.jpeg" alt="博主头像" class="ms-info-logo">
                     <span class="ms-info">笔名：乐余地</span>
                     <span class="ms-info">职业：前端狗</span>
                     <span class="ms-info">格言：不要怕难</span>

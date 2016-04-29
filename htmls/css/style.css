@@ -5,6 +5,65 @@ ver.:1.0.0
 DESCRIPTION:This is an less/css
 file for our design .
  ---------------------------*/
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font: 18px microsoft yahei, sans-serif;
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+input,
+textarea,
+*[class$="-inpt"],
+*[class$="-textarea"] {
+  font-family: "microsoft yahei";
+  border-radius: 3px;
+  outline: none;
+  resize: none;
+}
+*[class$="-notice"] {
+  position: relative;
+  font-size: 12px;
+}
+*[class$="-notice"]:before {
+  content: " * ";
+}
+a,
+.main-title,
+.flk-link,
+.w-tag,
+.s-icon,
+.post-search,
+.nav-item,
+.lg-label,
+.lg-inpt {
+  display: inline-block;
+}
+.flk-notice,
+.ms-info,
+.pagination,
+.page-nav,
+.lg-notice,
+.w-atc-label {
+  display: block;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background: #fd6d6d;
+  color: #fff;
+}
 /*-------------------- 
    社交网络图标部份
  -------------------*/
@@ -67,11 +126,9 @@ file for our design .
   font-size: 15px;
 }
 .social-icon .s-icon {
-  display: inline-block;
   width: 20px;
 }
 .page-nav {
-  display: block;
   width: 35%;
   margin: 0 auto;
 }
@@ -85,12 +142,10 @@ file for our design .
 }
 .nav-ls .nav-item {
   font-size: 18px;
-  display: inline-block;
-  width: 20%;
+  width: 25%;
   text-align: center;
 }
 .nav-ls .nav-item a {
-  display: inline-block;
   height: 55px;
   padding: 0 6px;
   color: #333;
@@ -101,19 +156,18 @@ file for our design .
 .nav-ls .nav-item a:hover {
   font-weight: bold;
   color: #000;
-  font-size: 20px;
-  border-bottom: 5px solid #ff9966;
+  font-size: 18px;
+  border-bottom: 5px solid #fd6d6d;
 }
 .nav-ls .nav-item .active {
   font-weight: bold;
   color: #000;
-  font-size: 20px;
-  border-bottom: 5px solid #ff9966;
+  font-size: 18px;
+  border-bottom: 5px solid #fd6d6d;
 }
 .post-search {
   position: absolute;
   top: 0;
-  display: inline-block;
   right: 250px;
 }
 .post-search .s-lab {
@@ -127,14 +181,13 @@ file for our design .
   outline: none;
   padding-left: 25px;
   border-radius: 25px;
-  font-family: "microsoft yahei";
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
 }
 .post-search .search-inpt:focus {
   width: 150px;
-  border: 1px solid #ff9966;
+  border: 1px solid #fd6d6d;
 }
 /*---------------------
      header CSS完成 
@@ -158,6 +211,21 @@ file for our design .
   float: left;
   width: 700px;
 }
+.main-header {
+  text-align: center;
+}
+.main-title {
+  margin: 0 0 20px;
+  padding: .3em .5em;
+  border-radius: 3px;
+  background: #fd6d6d;
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+}
+.adm-main {
+  width: 100% !important;
+}
 /* ----------------
 引入完成
  -----------------*/
@@ -167,37 +235,37 @@ file for our design .
 -------------------------------
  */
 .atc-entry {
-  position: relative;
+  height: 280px;
   margin-bottom: 20px;
-  background: #fff;
-  height: 250px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-  clear: both;
-  color: #999;
-  border-top: 3px solid #ff9966;
 }
-.atc-entry::before {
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  content: ' ';
-  width: 0;
-  height: 0;
-  border-top: 60px solid #EEEEEE;
-  border-right: 60px solid transparent;
+.atc-h {
+  position: relative;
+  height: 90px;
 }
-.atc-entry::after {
-  position: absolute;
-  bottom: -5px;
-  right: -5px;
-  content: ' ';
-  width: 0;
-  height: 0;
-  border-bottom: 60px solid #EEEEEE;
-  border-left: 60px solid transparent;
+.atc-info {
+  position: relative;
+  top: 35px;
+  left: 65px;
+  margin-left: 10px;
+  font-size: 12px;
 }
-.atc-t {
+.atc-r {
   position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 85%;
+  font-size: 15px;
+  text-indent: 30px;
+  word-break: break-word;
+}
+.atc-ra {
+  position: absolute;
+  bottom: 20px;
+  right: 65px;
+  font-size: 15px;
+}
+.atc-c-t {
+  position: relative;
   top: 35px;
   left: 50px;
   -webkit-transition: text-shadow 1s;
@@ -205,22 +273,30 @@ file for our design .
   transition: text-shadow 1s;
   font-weight: lighter;
 }
-.atc-t:hover {
-  text-shadow: 0 0 5px #ff9966;
+.atc-c-t:hover {
+  text-shadow: 0 0 5px #fd6d6d;
 }
-.atc-r {
-  position: absolute;
-  top: 85px;
+.atc-p {
+  position: relative;
   left: 50px;
   width: 85%;
   font-size: 15px;
   text-indent: 30px;
 }
-.atc-ra {
+.atc-content {
+  padding-bottom: 100px;
+  word-break: break-word;
+}
+.atc-link {
   position: absolute;
-  bottom: 20px;
-  right: 65px;
+  bottom: 60px;
+  left: 350px;
+  width: 300px;
+  text-align: left;
   font-size: 15px;
+}
+.atc-link:last-child {
+  bottom: 40px;
 }
 /* 
 -----------------------------------
@@ -244,13 +320,15 @@ file for our design .
   width: 100%;
   margin-bottom: 20px;
   background-color: #fff;
-  border-top: 3px solid #ff9966;
+  border-top: 3px solid #fd6d6d;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 .widget-h {
   width: 100px;
-  margin-bottom: 5px;
-  background-color: #ff9966;
+  height: 24px;
+  line-height: 20px;
+  margin: 0 auto 10px;
+  background-color: #fd6d6d;
   color: #fff;
   text-align: center;
   border-radius: 0 0 5px 5px;
@@ -270,7 +348,6 @@ file for our design .
 }
 .ms-info {
   position: relative;
-  display: block;
   margin: 0 auto;
   width: 80%;
   top: 80px;
@@ -282,7 +359,6 @@ file for our design .
   margin: 0 auto;
 }
 .w-tag {
-  display: inline-block;
   font-size: 12px;
   padding: 5px 7px;
   color: #eee;
@@ -291,20 +367,38 @@ file for our design .
 .w-tag:nth-child(6n+1) {
   background-color: #428BCA;
 }
+.w-tag:nth-child(6n+1):hover {
+  color: #fff;
+}
 .w-tag:nth-child(6n+2) {
   background-color: #5cb85c;
 }
+.w-tag:nth-child(6n+2):hover {
+  color: #fff;
+}
 .w-tag:nth-child(6n+3) {
-  background-color: #ff9966;
+  background-color: #fd6d6d;
+}
+.w-tag:nth-child(6n+3):hover {
+  color: #fff;
 }
 .w-tag:nth-child(6n+4) {
   background-color: #d9534f;
 }
+.w-tag:nth-child(6n+4):hover {
+  color: #fff;
+}
 .w-tag:nth-child(6n+5) {
   background-color: #567e95;
 }
+.w-tag:nth-child(6n+5):hover {
+  color: #fff;
+}
 .w-tag:nth-child(6n+6) {
   background-color: #b433ff;
+}
+.w-tag:nth-child(6n+6):hover {
+  color: #fff;
 }
 .w-rpost {
   margin: 0;
@@ -349,50 +443,58 @@ file for our design .
 -------------------------
  */
 .page-label {
+  position: relative;
+  top: 15px;
   clear: both;
   height: 40px;
   width: 100%;
   margin: 0 auto;
+  background-color: #fff;
+  border: 3px solid #fd6d6d;
 }
-.page-lab-bx span {
+.page-lab-bx span,
+.page-lab-bx .page-item {
   float: left;
-  display: inline-block;
+  text-align: center;
   width: 6%;
   height: 40px;
   line-height: 40px;
-  text-align: center;
 }
 .page-lab-bx .current {
-  background-color: #ff9966;
+  background-color: #fd6d6d;
   color: #fff;
 }
 .page-lab-bx a {
-  float: left;
-  display: inline-block;
-  text-align: center;
-  width: 6%;
-  height: 40px;
-  line-height: 40px;
   -webkit-transition: all .5s;
   -o-transition: all .5s;
   transition: all .5s;
 }
 .page-lab-bx a:hover {
-  background-color: #ff9966;
+  background-color: #fd6d6d;
   color: #fff;
+}
+.page-lab-bx .totalPage {
+  position: absolute;
+  left: 66%;
+  width: 12%;
+  border-left: 1px solid #eee;
+}
+.page-lab-bx .ban {
+  color: #eee;
 }
 .page-label-select {
   float: right;
   text-align: center;
   width: 120px;
+  margin-right: 2px;
 }
 .page-label-select .pagination {
-  display: block;
   width: 120px;
   position: relative;
   line-height: 40px;
   font-size: 16px;
-  border: 1px solid #ff9966;
+  border-left: 1px solid #fd6d6d;
+  border-right: 1px solid #fd6d6d;
   background-color: #fff;
   -webkit-transition: all .2s;
   -o-transition: all .2s;
@@ -400,29 +502,29 @@ file for our design .
 }
 .page-label-select .pagination:hover {
   color: #fff;
-  background-color: #ff9966;
+  background-color: #fd6d6d;
 }
 .page-label-select .pagination:hover > .select-list {
-  height: 200px;
+  height: 90px;
   position: absolute;
-  top: -90px;
+  top: -25px;
   opacity: 1;
   width: 120px;
 }
 .page-label-select .pagination .select-list {
-  border: 1px solid #ff9966;
+  position: absolute;
+  border: 1px solid #fd6d6d;
   z-index: 100;
   top: 0px;
   height: 0px;
-  width: 0px;
-  margin: 0;
+  width: 120px;
+  margin: 0 ;
   padding: 0;
   opacity: 0;
-  position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
   list-style: none;
-  background-color: #f0f0f0;
+  background-color: #fff;
   -webkit-transition: all .4s ease .1s;
   -o-transition: all .4s ease .1s;
   transition: all .4s ease .1s;
@@ -433,7 +535,7 @@ file for our design .
   font-size: 12px;
 }
 .page-label-select .pagination .select-list .child-item:hover {
-  background-color: #ff9966;
+  background-color: #fd6d6d;
 }
 .page-label-select .pagination .select-list .child-item:hover > a {
   color: #fff;
@@ -475,27 +577,308 @@ file for our design .
   padding-top: 10px;
   text-align: center;
 }
-html,
-body {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font: 18px microsoft yahei, sans-serif;
-  background-color: #eee;
+/* 
+-------------------------------
+友情链接页面 样式表
+-------------------------------
+ */
+.friend-links {
+  padding: 50px 0 40px 50px;
 }
-a {
-  text-decoration: none;
-  color: #000;
-}
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-::selection {
-  background: #ff9966;
+.flk-link {
+  width: 20%;
+  height: 25px;
+  line-height: 25px;
+  margin: 5px 8px;
+  font-size: 15px;
+  text-align: center;
   color: #fff;
 }
+.flk-link:nth-child(6n+1) {
+  background-color: #5cb85c;
+}
+.flk-link:nth-child(6n+1):hover {
+  color: #fff;
+}
+.flk-link:nth-child(6n+2) {
+  background-color: #428BCA;
+}
+.flk-link:nth-child(6n+2):hover {
+  color: #fff;
+}
+.flk-link:nth-child(6n+4) {
+  background-color: #b433ff;
+}
+.flk-link:nth-child(6n+4):hover {
+  color: #fff;
+}
+.flk-link:nth-child(6n+3) {
+  background-color: #d9534f;
+}
+.flk-link:nth-child(6n+3):hover {
+  color: #fff;
+}
+.flk-link:nth-child(6n+5) {
+  background-color: #567e95;
+}
+.flk-link:nth-child(6n+5):hover {
+  color: #fff;
+}
+.flk-link:nth-child(6n+6) {
+  background-color: #fd6d6d;
+}
+.flk-link:nth-child(6n+6):hover {
+  color: #fff;
+}
+.flk-notice {
+  bottom: -20px;
+  margin: 0px 10px 0 10px;
+  color: #bbb;
+}
+/* 
+-----------------------------------
+友情链接部份引入完成
+-----------------------------------
+ */
+.card-box {
+  position: relative;
+  min-height: 200px;
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  clear: both;
+  color: #999;
+  border-top: 3px solid #fd6d6d;
+}
+.card-box::before {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-top: 70px solid #EEEEEE;
+  border-right: 60px solid transparent;
+}
+.card-box::after {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-bottom: 70px solid #EEEEEE;
+  border-left: 60px solid transparent;
+}
+/* 
+-------------------------
+登录框样式表引入
+-------------------------
+ */
+#login-box {
+  position: relative;
+  width: 40%;
+  height: 350px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+.lg-label,
+.lg-inpt {
+  margin-top: 20px;
+}
+.lg-label {
+  width: 30%;
+  text-align: right;
+}
+.lg-inpt {
+  height: 25px;
+  width: 45%;
+  padding-left: 5px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  outline: none;
+}
+.lg-inpt:focus {
+  border: 1px solid #fd6d6d;
+}
+.lg-button {
+  width: 25%;
+  height: 25px;
+  margin: 20px 10px;
+  background-color: #fd6d6d;
+  border: none;
+  outline: none;
+}
+.v-code {
+  margin-top: 15px;
+  width: 120px;
+  height: 50px;
+}
+/* 
+--------------------------
+按钮链接 属性
+--------------------------
+ */
+button,
+.button,
+.link {
+  font-family: "microsoft yahei";
+  color: #fff;
+  background-color: #fd6d6d;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #000;
+  -webkit-transition: box-shadow 0.5s;
+  -o-transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+}
+button:hover,
+.button:hover,
+.link:hover {
+  box-shadow: 0 5px 10px #000;
+}
+button:active,
+.button:active,
+.link:active {
+  box-shadow: 0 0 0 #000;
+}
+/* 
+----------------------------
+引入完成
+----------------------------
+ */
+/* 
+----------------------------
+404页面css属性
+----------------------------
+ */
+.nfp-notice {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+}
+.nfp-link {
+  display: block;
+  width: 80px;
+  margin: 50px auto 0;
+  padding: 5px;
+  text-align: center;
+  background-color: #fd6d6d;
+}
+/* 
+----------------------------
+引入发布文章，修改文章样式表
+----------------------------
+ */
+#write-article {
+  position: relative;
+  width: 80%;
+  margin: 50px auto;
+}
+.w-atc-label {
+  font-size: 20px;
+  color: #666;
+  margin: 10px 0 5px;
+}
+.w-atc-inpt {
+  height: 30px;
+  width: 100%;
+  font-size: 15px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 1px 2px #eee;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.w-atc-inpt:focus {
+  border-bottom: 2px solid #fd6d6d;
+  box-shadow: 0 1px 1px #fd6d6d;
+}
+.w-atc-textarea {
+  width: 100%;
+  padding: 10px 0 0 10px;
+  font-size: 15px;
+  border-top: 2px solid #eee;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-bottom: 2px solid #eee;
+  box-shadow: 0 1px 2px #eee;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.w-atc-textarea:focus {
+  border-top: 2px solid #fd6d6d;
+  border-right: 1px solid #fd6d6d;
+  border-left: 1px solid #fd6d6d;
+  border-bottom: 2px solid #fd6d6d;
+  box-shadow: 0 1px 1px #fd6d6d;
+}
+#w-atc-summary {
+  height: 125px;
+  line-height: 25px;
+  font-size: 15px;
+  text-indent: 30px;
+}
+#w-atc-content {
+  height: 600px;
+  margin-bottom: 100px;
+  line-height: 25px;
+  font-size: 15px;
+  text-indent: 30px;
+}
+.post-button {
+  position: relative;
+  top: -70px;
+  width: 10%;
+  height: 30px;
+  margin: 5px 10px;
+  background-color: #fd6d6d;
+  border: none;
+  outline: none;
+  float: right;
+}
+/*
+----------------------------------
+超级不喜欢的表格布局 仅为文章管理
+---------------------------------- 
+ */
+table {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #000;
+  border-radius: 5px;
+}
+th,
+*[class$="-th"] {
+  background-color: #eee;
+  height: 40px;
+  vertical-align: middle;
+}
+td {
+  background-color: #fff;
+  text-align: center;
+}
+.i-th {
+  width: 10%;
+}
+.t-th {
+  width: 70%;
+}
+.o-th {
+  width: 20%;
+}
+.manage-atc ~ .card-box {
+  padding-bottom: 1px;
+}
+.mng-atc-link {
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+/* 
+-------------------------------
+引入完毕
+-------------------------------
+ */

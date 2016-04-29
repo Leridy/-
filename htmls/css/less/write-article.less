@@ -1,0 +1,83 @@
+/* 
+----------------------------
+引入发布文章，修改文章样式表
+----------------------------
+ */
+
+#write-article {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.w-atc-label {
+    font-size: 20px;
+    color: #666;
+    margin: 10px 0 5px;
+}
+
+.w-atc-inpt {
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 1px 2px #eee;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    &:focus {
+        border-bottom: 2px solid @theme-color;
+        box-shadow: 0 1px 1px @theme-color ;
+    }
+}
+
+.w-atc-textarea {
+    width: 100%;
+    padding: 10px 0 0 10px;
+    font-size: 15px;
+    border-top: 2px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 1px 2px #eee;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    &:focus {
+        border-top: 2px solid @theme-color ;
+        border-right: 1px solid @theme-color;
+        border-left: 1px solid @theme-color;
+        border-bottom: 2px solid @theme-color;
+        box-shadow: 0 1px 1px @theme-color ;
+    }
+}
+
+#w-atc-summary {
+    height: 125px;
+    line-height: 25px;
+    font-size: 15px;
+    text-indent: 30px;
+}
+
+#w-atc-content {
+    height: 600px;
+    margin-bottom: 100px;
+    line-height: 25px;
+    font-size: 15px;
+    text-indent: 30px;
+}
+
+.post-button{
+	position: relative;
+	top: -70px;
+	width: 10%;
+    height: 30px;
+    margin: 5px 10px;
+    background-color: @theme-color;
+    border: none;
+    outline: none;
+    float: right;
+}
