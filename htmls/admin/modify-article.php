@@ -6,6 +6,8 @@ check_sign_in();
 $id = is_modify_article();
 $query = mysql_query("select * from article where id=$id");
 $data = mysql_fetch_assoc($query);
+$content = str_replace("", "\t", $data['content']);
+$content = str_replace("</p><p class=\"atc-p\">", "\r\n\t", $content);
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -72,7 +74,7 @@ $data = mysql_fetch_assoc($query);
                     <label for="w-atc-summary" class="w-atc-label">简介：</label>
                     <textarea  maxlength="200"  class="w-atc-textarea" name="atc-summary" id="w-atc-summary" placeholder="在这里输入简介 最多200字"><?php echo $data['summary'] ?></textarea>
                     <label for="w-atc-content" class="w-atc-label">正文：</label>
-                    <textarea  maxlength="1500"  class="w-atc-textarea" name="atc-content" id="w-atc-content" placeholder="在这里输入正文内容 最多1500字"><?php echo $data['content'] ?></textarea>
+                    <textarea  maxlength="1500"  class="w-atc-textarea" name="atc-content" id="w-atc-content" placeholder="在这里输入正文内容 最多1500字"><?php echo $content ?></textarea>
                     <input type="submit" class="post-button button" value="马上发布">
                     <input type="reset" class="post-button button" value="全部清空">
                 </form>

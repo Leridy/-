@@ -139,9 +139,13 @@ function get_page() {
 //传参为$p 当前页的数值，$t总的文章数量，$k 当前页的keyword值
 function pagination($p, $t, $k) {
 	//首先声明变量$totalPage 并取值为所有文章的数量除以4
-	$toltalPage = ceil($t / 4);
+	$totalPage = ceil($t / 4);
 	//声明变量 $thisPage ，并赋值为当前页面的 路径
 	$thisPage = $_SERVER['PHP_SELF'];
+
+/*	if ($p > $totalPage ) {
+header('location:' . $thisPage . '?page=' . $totalPage);
+}*/
 
 	//检查当前传值中是否存在keywords值 若若不存在 则将变量 $keywords 赋值为空字符串，若存在则赋值为当前 值，以及get请求格式
 	if (is_null($k)) {
@@ -151,10 +155,10 @@ function pagination($p, $t, $k) {
 	}
 
 	//判断当前页是否为第一页或者为空页，若为空，则退出函数不执行任何输出
-	if ($toltalPage == 0 || $toltalPage == 1) {
+	if ($totalPage == 0 || $totalPage == 1) {
 		return 1;
 		//当总页数大于7时首先输出分页最外层的标签
-	} elseif ($toltalPage > 7) {
+	} elseif ($totalPage > 7) {
 		echo "<div class=\"page-label\"><div class=\"page-lab-bx\">";
 		//再判断当前页是否为第一页，若是着输出一个不可被点击的上页符号，若不是则输出 一个指向当前页的上页的连接的翻页符号
 		if ($p == 1) {
@@ -171,7 +175,7 @@ function pagination($p, $t, $k) {
 			//输出一个省略符
 			echo "<span>...</span>";
 			//判断 当 当前页大于或等于4 且 当前页小于 总页数减三时
-		} elseif ($p >= 4 && $p < $toltalPage - 3) {
+		} elseif ($p >= 4 && $p < $totalPage - 3) {
 			//首先输出省略符，在循环执行当前页的前三页至当前页之后三页共七次输出分页函数
 			echo "<span>...</span>";
 			for ($i = ($p - 3); $i <= ($p + 3); $i++) {
@@ -180,31 +184,31 @@ function pagination($p, $t, $k) {
 			//输出省略符
 			echo "<span>...</span>";
 			//当当前页地页码大于 全部页面数减三时
-		} elseif ($p >= $toltalPage - 3) {
+		} elseif ($p >= $totalPage - 3) {
 			// 先输出省略符
 			echo "<span>...</span>";
 			//在执行总页数及前六页的标签，共七次
-			for ($i = ($toltalPage - 6); $i <= $toltalPage; $i++) {
+			for ($i = ($totalPage - 6); $i <= $totalPage; $i++) {
 				output_pagination($i, $p, $keywords, $thisPage);
 			}
 		}
 		//当当前页数值等于总页数时，输出一个无法被点击的下一页选项，否则输出一个指向当前页的下一页的链接
-		if ($p == $toltalPage) {
+		if ($p == $totalPage) {
 			echo "<span class=\"ban\">></span>";
 		} else {
 			echo "<a href=\"$thisPage?" . $keywords . "page=" . ($p + 1) . "\" title=\"下一页\" class=\"page-item\">></a>";
 		}
 		//输出总页数
-		echo "<span class=\"totalPage\">共" . $toltalPage . "页</span>";
+		echo "<span class=\"totalPage\">共" . $totalPage . "页</span>";
 		//在快捷分页选项卡中输出所有的分页链接
 		echo "<div class=\"page-label-select\"><h3 class=\"pagination\">分页 <i class=\"fa fa-sort\"></i><ul class=\"select-list\">";
-		for ($i = 1; $i <= $toltalPage; $i++) {
+		for ($i = 1; $i <= $totalPage; $i++) {
 			echo "<li class=\"child-item\"><a href=\"$thisPage?" . $keywords . "page=$i\" title=\"第" . $i . "页\">$i</a></li>";
 		}
 		//输出关闭标签
 		echo "</ul></h3></div><!-- 选择跳转分页部分 --></div><!-- 分页部分完结 -->";
 		//若总页数小于等于七页则换种方法
-	} elseif ($toltalPage <= 7) {
+	} elseif ($totalPage <= 7) {
 		//与前相同
 		echo "<div class=\"page-label\">
                     <div class=\"page-lab-bx\">";
@@ -214,18 +218,18 @@ function pagination($p, $t, $k) {
 			echo "<a href=\"$thisPage?" . $keywords . "page=" . ($p - 1) . "\" title=\"上一页\" class=\"page-item\"><</a>";
 		}
 		//直接执行所有页次的输出
-		for ($i = 1; $i <= $toltalPage; $i++) {
+		for ($i = 1; $i <= $totalPage; $i++) {
 			output_pagination($i, $p, $keywords, $thisPage);
 		}
 		//与前相同
-		if ($p == $toltalPage) {
+		if ($p == $totalPage) {
 			echo "<span class=\"ban\">></span>";
 		} else {
 			echo "<a href=\"$thisPage?" . $keywords . "page=" . ($p + 1) . "\" title=\"下一页\" class=\"page-item\">></a>";
 		}
-		echo "<span class=\"totalPage\">共" . $toltalPage . "页</span>";
+		echo "<span class=\"totalPage\">共" . $totalPage . "页</span>";
 		echo "<div class=\"page-label-select\"><h3 class=\"pagination\">分页 <i class=\"fa fa-sort\"></i><ul class=\"select-list\">";
-		for ($i = 1; $i <= $toltalPage; $i++) {
+		for ($i = 1; $i <= $totalPage; $i++) {
 			echo "<li class=\"child-item\"><a href=\"$thisPage?" . $keywords . "page=$i\" title=\"第" . $i . "页\">$i</a></li>";
 		}
 		echo "</ul></h3></div><!-- 选择跳转分页部分 --></div><!-- 分页部分完结 -->";

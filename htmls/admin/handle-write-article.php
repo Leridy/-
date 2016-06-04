@@ -12,6 +12,9 @@ $summary = $_POST['atc-summary'];
 $content = $_POST['atc-content'];
 $dateline = time();
 $keywords = $_POST['atc-keywords'];
+
+$content = str_replace(array("\r\n\t", "\r\n", "\r", "\n"), '</p><p class=\"atc-p\">', $content);
+
 $insertsql = "insert into article(title, author, summary, content, time, keywords) values('$title', '$author', '$summary', '$content', '$dateline' , '$keywords')";
 if (mysql_query($insertsql)) {
 	echo "<script>alert('发布文章成功');window.location.href='manage-article.php';</script>";
